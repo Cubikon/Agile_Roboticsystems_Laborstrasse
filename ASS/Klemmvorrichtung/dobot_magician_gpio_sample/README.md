@@ -22,3 +22,11 @@ Stellen Sie sicher, dass die Dobot API auf Ihrem System installiert und richtig 
 Nur in dieser Version ist die TeachIn-Ansteuerung des GPIOs möglich!
 
 Alternativ kann die vorliegende Funktion mittels der Teach & Plackback Funktion in Dobot Studio realisiert werden. Dazu können die Verfahrpunkte einfach eingeteacht werden. Bzgl. dem Ansteuern der Klemmvorrichtung mittels dem GPIO lassen sich über die "Pro" Ansicht Outputpins zu den jeweiligen Befehlen hinzufügen und mit einem Output-Wert versehen. Der für die Funktion vorgesehene Pin ist EIO_17, welche auf HIGH/1 schaltet.
+
+1. TeachIn-Lab
+![TeachIn-Lab](./Dobot-Studio-TeachIn.png)
+2. Pro-Steuerung anwählen und Pins schalten
+![Pro-Steuerung anwählen und Pins schalten](./Dobot-Studio-TeachIn2.png)
+
+Datum: 16.08.2024\
+Autor: Mark Lattwein
