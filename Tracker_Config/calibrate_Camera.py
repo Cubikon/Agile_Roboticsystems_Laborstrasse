@@ -13,11 +13,16 @@ from configparser import ConfigParser
 import cv2
 from cv2 import aruco
 
-print(os.getcwd())
+from Tracker_Config.path_configuration import PathConfiguration
+
+print("Tracker_Config: "+os.getcwd())
+
+path_config = PathConfiguration()
+config_object = path_config.load_configuration()
+
 
 # Lese Config Datei
-config_object = ConfigParser()
-config_object.read("..\\Tracker_Config\\tracker_config.ini")
+# config_object.read("Tracker_Config\\tracker_config.ini")
 calibConf = config_object["Calibration"]
 
 # Parameter

@@ -12,6 +12,7 @@ from configparser import ConfigParser
 import cv2
 import numpy as np
 
+from Tracker_Config.path_configuration import PathConfiguration
 from Tracker_Config.tracker_utils import VideoCapture, berechne_mittelpunkt, send_to_telegram
 
 import pyboof as pb
@@ -19,8 +20,10 @@ import pyboof as pb
 
 
 # Lese Config Datei
-config_object = ConfigParser()
-config_object.read("..\\Tracker_Config\\tracker_config.ini")
+# config_object = ConfigParser()
+# config_object.read("..\\Tracker_Config\\tracker_config.ini")
+path_config = PathConfiguration()
+config_object = path_config.load_configuration()
 cameraConf = config_object["Camera"]
 telegramConf = config_object["Telegram"]
 trackerConf = config_object["Tracker"]

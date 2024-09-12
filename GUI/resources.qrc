@@ -1,17 +1,28 @@
 <RCC>
   <qresource prefix="icons">
+    <file>img/refresh-double.svg</file>
+    <file>img/back-custom.svg</file>
+    <file>img/keyboard-backspace.svg</file>
+    <file>img/flask.svg</file>
+    <file>img/arrow-left.svg</file>
+    <file>img/print.svg</file>
+    <file>img/save.svg</file>
     <file>img/qr-code-scanner.svg</file>
     <file>img/scan-qr-code.svg</file>
+    <file>img/command-line.svg</file>
     <file>img/arrow-right.svg</file>
     <file>img/circle.svg</file>
+    <file>img/copy.svg</file>
+    <file>img/contentcopy.svg</file>
     <file>img/dna.svg</file>
     <file>img/graph-up.svg</file>
     <file>img/home.svg</file>
     <file>img/homebig.png</file>
-    <file>img/import.svg</file>
     <file>img/import-1.svg</file>
     <file>img/laboratory.svg</file>
     <file>img/settings.svg</file>
     <file>img/stream.svg</file>
   </qresource>
+  <qresource prefix="newPrefix"/>
+  <qresource prefix="newPrefix"/>
 </RCC>

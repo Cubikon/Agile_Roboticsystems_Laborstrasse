@@ -588,9 +588,9 @@ def load():
     if platform.system() == "Windows":
         print("您用的dll是64位，为了顺利运行，请保证您的python环境也是64位")
         print("python环境是：",platform.architecture())
-        return CDLL("./DobotDll.dll",  RTLD_GLOBAL)
+        return CDLL("Main/DobotDll.dll",  RTLD_GLOBAL)
     elif platform.system() == "Darwin":
-        return CDLL("./libDobotDll.dylib",  RTLD_GLOBAL)
+        return CDLL("Main/libDobotDll.dylib",  RTLD_GLOBAL)
     elif platform.system() == "Linux":
         return cdll.loadLibrary("libDobotDll.so")
 

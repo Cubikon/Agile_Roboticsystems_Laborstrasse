@@ -1,5 +1,5 @@
 """ Beinhaltet den Tracker, das Lesen der notwendigen Konfigwerte und die Klassen für die Tube, Station und das Log"""
-
+from Tracker_Config.path_configuration import PathConfiguration
 
 """ Inhaltsverzeichnis:
 
@@ -26,7 +26,7 @@ from threading import Thread
 import ast
 import time
 
-import cv2
+import cv2 as cv2
 import pyboof as pb
 from configparser import ConfigParser
 import requests
@@ -43,12 +43,14 @@ from ultralytics import YOLO
 sys.path.append(os.path.join(os.path.dirname(sys.path[0]),'Tracker_Config'))
 #wenn diese Import rot markiert sind muss in intellij der Ordner Monitoring und Tracker_Config rechtsklick mark as
 # source Folder  eingestellt werrden
-import calibrate_Camera as calibrate_Camera
-from tracker_utils import VideoCapture, mergeIDs, calculate_distance, send_to_telegram
+import Tracker_Config.calibrate_Camera as calibrate_Camera
+from Tracker_Config.tracker_utils import VideoCapture, mergeIDs, calculate_distance, send_to_telegram
 
 # Lese Config Datei
-config_object = ConfigParser()
-config_object.read("..\\Tracker_Config\\tracker_config.ini")
+# config_object = ConfigParser()
+# config_object.read("..\\Tracker_Config\\tracker_config.ini")
+path_config = PathConfiguration()
+config_object = path_config.load_configuration()
 cameraConf = config_object["Camera"]
 trackerConf = config_object["Tracker"]
 telegramConf = config_object["Telegram"]
